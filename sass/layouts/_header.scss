@@ -1,0 +1,36 @@
+$header-height: 60px;
+$arrow-height: 16px;
+$arrow-left-padding: calc(($header-height - $arrow-height) / 2);
+$arrow-width: 15%;
+$image-height: 30px;
+$image-width: calc(100% - ($arrow-width * 2));
+
+.header {
+    display: flex;
+    justify-content: center;
+    height: $header-height;
+    box-shadow: 0px 2px 3px $grey-2-color;
+
+    &__arrow {
+        display: flex;
+        align-items: center;
+        width: $arrow-width;
+        padding-left: $arrow-left-padding;
+        color: $grey-1-color;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $image-width;
+
+        img {
+            height: $image-height;
+        }
+    }
+
+    &__filler {
+        width: $arrow-width;
+    }
+}
