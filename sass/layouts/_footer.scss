@@ -1,0 +1,56 @@
+$footer-padding: 20px;
+$logo-height: 15px;
+$logo-bottom-margin: 10px;
+$icons-width: 20px;
+$icons-right-margin: 5px;
+$footer-children-height: 25px;
+
+%footer-children {
+    @extend %flex-row-start-center;
+    height: $footer-children-height;
+}
+
+.footer {
+    @extend %flex-column-space-between-stretch;
+
+    background-color: $grey-1-color;
+    color: $grey-5-color;
+
+    @include text-font;
+    font-size: 14px;
+
+    padding: $footer-padding;
+
+    &__logo {
+        margin-bottom: $logo-bottom-margin;
+        img {
+            height: $logo-height;
+        }
+    }
+
+    &__suggest_restaurant {
+        @extend %footer-children;
+        i {
+            @extend %flex-row-center-center;
+            width: $icons-width;
+            margin-right: $icons-right-margin;
+        }
+    }
+
+    &__become-partner {
+        @extend %footer-children;
+        i {
+            @extend %flex-row-center-center;
+            width: $icons-width;
+            margin-right: $icons-right-margin;
+        }
+    }
+
+    &__legal-notice {
+        @extend %footer-children;
+    }
+
+    &__contact {
+        @extend %footer-children;
+    }
+}

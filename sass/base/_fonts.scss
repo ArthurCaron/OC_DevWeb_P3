@@ -9,3 +9,15 @@
 $logo-font: 'Shrikhand';
 $titles-font: 'Shrikhand';
 $text-font: 'Roboto';
+
+@mixin logo-font {
+    font-family: $logo-font, 'Courier New', Courier, monospace;
+}
+
+@mixin titles-font {
+    font-family: $titles-font, 'Courier New', Courier, monospace;
+}
+
+@mixin text-font {
+    font-family: $text-font, 'Courier New', Courier, monospace;
+}
