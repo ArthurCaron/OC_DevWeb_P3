@@ -3,7 +3,7 @@ $explanation-horizontal-padding: 15px;
 $list-horizontal-padding: 10px;
 $list-element-height: 60px;
 $list-element-radius: 15px;
-$list-element-horizontal-margin: 20px;
+$list-element-vertical-margin: 20px;
 $icon-width: 35px;
 
 .explanation {
@@ -11,46 +11,44 @@ $icon-width: 35px;
     padding: $explanation-vertical-padding $explanation-horizontal-padding;
 
     h1 {
-        width: 100%;
-
         @include big-title;
     }
 
     ul {
         padding: 0px $list-horizontal-padding;
-    }
 
-    ul li {
-        @extend %flex-row-start-center;
-        height: $list-element-height;
-        margin: $list-element-horizontal-margin 0px;
-        
-        box-shadow: 0px 7px 7px $light-grey-2;
-
-        background-color: $light-grey-3;
-        border-radius: $list-element-radius;
-
-        .dot {
-            position: relative;
-            left: -10px;
-        }
-
-        i {
-            width: $icon-width;
-            margin-left: 5px;
-            color: $dark-grey-2;
-        }
-
-        p {
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        &:hover {
-            background-color: $primary-color-lighter;
-
+        li {
+            @extend %flex-row-start-center;
+            height: $list-element-height;
+            margin: $list-element-vertical-margin 0px;
+            
+            box-shadow: 0px 5px 5px $light-grey-2;
+    
+            background-color: $light-grey-3;
+            border-radius: $list-element-radius;
+    
+            .dot {
+                position: relative;
+                left: -10px;
+            }
+    
             i {
-                color: $primary-color;
+                width: $icon-width;
+                margin-left: 5px;
+                color: $dark-grey-2;
+            }
+    
+            p {
+                font-size: 14px;
+                font-weight: 500;
+            }
+    
+            &:hover {
+                background-color: $primary-color-lighter;
+    
+                i {
+                    color: $primary-color;
+                }
             }
         }
     }

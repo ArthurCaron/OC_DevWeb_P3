@@ -1,0 +1,76 @@
+$restaurants-vertical-padding: 30px;
+$restaurants-horizontal-padding: 15px;
+$figure-radius: 15px;
+$figcaption-padding: 10px;
+$list-element-vertical-margin: 20px;
+
+.restaurants {
+    @extend %flex-column-start-stretch;
+    padding: $restaurants-vertical-padding $restaurants-horizontal-padding;
+    
+    background-color: $light-grey-3;
+
+    h1 {
+        @include big-title;
+    }
+
+    ul {
+        li {
+            position: relative;
+            margin: $list-element-vertical-margin 0px;
+
+            .new-restaurant::before {
+                content: "Nouveau";
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding: 6px 10px;
+
+                border-radius: 2px;
+                
+                background-color: $new-restaurant-color;
+                color: $new-restaurant-text-color;
+
+                font-size: 11px;
+                font-weight: 500;
+            }
+
+            figure {
+                border-radius: $figure-radius;
+
+                box-shadow: 0px 7px 7px $light-grey-2;
+
+                background-color: $light-grey-4;
+
+                img {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: $figure-radius $figure-radius 0px 0px;
+                }
+
+                figcaption {
+                    @extend %flex-row-space-between-center;
+                    padding: $figcaption-padding;
+
+                    div {
+                        h2 {
+                            margin-bottom: 5px;
+                            font-size: 14px;
+                            font-weight: 600;
+                        }
+                        p {
+                            font-size: 13px;
+                            font-weight: 300;
+                        }
+                    }
+
+                    i {
+                        margin-right: 10px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
