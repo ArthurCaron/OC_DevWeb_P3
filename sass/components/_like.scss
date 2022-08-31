@@ -1,0 +1,42 @@
+$like-size: 20px;
+
+.like {
+    @extend %flex-row-center-center;
+    position: relative;
+    width: $like-size;
+    height: $like-size;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+
+    &__bottom {
+        position: absolute;
+        width: $like-size;
+        height: $like-size;
+        font-size: $like-size;
+
+        background: linear-gradient(170deg, $primary-color, $secondary-color);
+        background-clip: text;
+	    color: transparent;
+    }
+
+    &__top {
+        position: absolute;
+        width: $like-size;
+        height: $like-size;
+        font-size: $like-size;
+
+        background-color: inherit;
+        color: $dark-grey-1;
+
+        clip-path: inset(0% 0% 0% 0%);
+        transition: clip-path 1s ease-in-out;
+    }
+
+    &:focus {
+        .like__top {
+            clip-path: inset(0% 0% 100% 0%);
+        }
+    }
+}

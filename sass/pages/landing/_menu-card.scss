@@ -42,32 +42,39 @@ $list-element-vertical-margin: 20px;
 
                 background-color: white;
 
-                img {
-                    width: 100%;
-                    height: 150px;
-                    object-fit: cover;
-                    border-radius: $figure-radius $figure-radius 0px 0px;
+                a {
+                    display: block;
+
+                    img {
+                        width: 100%;
+                        height: 150px;
+                        object-fit: cover;
+                        border-radius: $figure-radius $figure-radius 0px 0px;
+                    }
                 }
 
                 figcaption {
                     @extend %flex-row-space-between-center;
                     padding: $figcaption-padding;
 
-                    div {
-                        h2 {
-                            margin-bottom: 5px;
-                            font-size: 14px;
-                            font-weight: 600;
-                        }
-                        p {
-                            font-size: 13px;
-                            font-weight: 300;
+                    a {
+                        width: 100%;
+
+                        div {
+                            h2 {
+                                margin-bottom: 5px;
+                                font-size: 14px;
+                                font-weight: 600;
+                            }
+                            p {
+                                font-size: 13px;
+                                font-weight: 300;
+                            }
                         }
                     }
 
-                    i {
+                    button {
                         margin-right: 10px;
-                        font-size: 20px;
                     }
                 }
             }
