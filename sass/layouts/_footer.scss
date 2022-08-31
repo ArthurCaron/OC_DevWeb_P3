@@ -52,4 +52,9 @@ $footer-children-height: 25px;
     &__contact {
         @extend %footer-children;
     }
+
+    a {
+        color: $light-grey-4;
+        text-decoration: none;
+    }
 }
