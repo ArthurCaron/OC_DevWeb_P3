@@ -7,28 +7,28 @@
   align-items: stretch;
 }
 
-.explanation ul li, .footer__contact, .footer__legal-notice, .footer__become-partner, .footer__suggest_restaurant, .header__icon {
+.menu-list__items__item, .explanation ul li, .footer__contact, .footer__legal-notice, .footer__become-partner, .footer__suggest_restaurant, .header__icon {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
 
-.geolocation, .footer__become-partner i, .footer__suggest_restaurant i, .header__logo, .spinner, .like, .dot {
+.menu-list__items__item__select, .geolocation, .footer__become-partner i, .footer__suggest_restaurant i, .header__logo, .spinner, .like, .dot {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.menu-list__items__item div, .menu-list__header, .restaurants ul li figure figcaption {
+.menu-list__header, .restaurants ul li figure figcaption {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.menu-list__items__item, .footer {
+.menu-list__items__item__content, .footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -47,6 +47,13 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+}
+
+.menu-list__items__item__amount {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
@@ -455,6 +462,7 @@ body {
 }
 .menu-list__header button {
   margin-right: 20px;
+  background-color: #f5f5f5;
 }
 .menu-list__items {
   margin-bottom: 30px;
@@ -475,27 +483,499 @@ body {
   border-bottom: solid 3px #99E2D0;
 }
 .menu-list__items__item {
-  padding: 15px;
+  height: 65px;
   margin: 10px 0px;
+  overflow: hidden;
+  cursor: pointer;
   border-radius: 10px;
   box-shadow: 0px 7px 7px #e7e7e7;
   background-color: white;
 }
-.menu-list__items__item h3 {
+.menu-list__items__item__content {
+  flex-grow: 1;
+  height: 100%;
+  padding: 15px 5px 15px 15px;
+  overflow: hidden;
+}
+.menu-list__items__item__content h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-size: 14px;
   font-weight: 500;
 }
-.menu-list__items__item div .notes {
+.menu-list__items__item__content p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-size: 12px;
   font-weight: 300;
 }
-.menu-list__items__item div .amount {
+.menu-list__items__item__amount {
+  height: 100%;
+  padding: 15px 15px 15px 5px;
   font-size: 14px;
   font-weight: 500;
+}
+.menu-list__items__item__select {
+  width: 60px;
+  height: 100%;
+  margin: 0px -60px 0px 0px;
+  transition: margin 250ms ease-in-out;
+  background-color: #99E2D0;
+}
+.menu-list__items__item__select i {
+  font-size: 22px;
+  color: white;
+}
+.menu-list__items__item:hover .menu-list__items__item__select {
+  margin: 0px 0px 0px 0px;
+}
+.menu-list__items__item:hover .menu-list__items__item__select i {
+  -webkit-animation: select 150ms ease-in-out 100ms;
+          animation: select 150ms ease-in-out 100ms;
+}
+.menu-list__items:nth-child(1) .menu-list__items__item:nth-child(1) {
+  -webkit-animation: loading 700ms ease-in-out -350ms backwards;
+          animation: loading 700ms ease-in-out -350ms backwards;
+}
+.menu-list__items:nth-child(1) .menu-list__items__item:nth-child(2) {
+  -webkit-animation: loading 700ms ease-in-out -200ms backwards;
+          animation: loading 700ms ease-in-out -200ms backwards;
+}
+.menu-list__items:nth-child(1) .menu-list__items__item:nth-child(3) {
+  -webkit-animation: loading 700ms ease-in-out -50ms backwards;
+          animation: loading 700ms ease-in-out -50ms backwards;
+}
+.menu-list__items:nth-child(1) .menu-list__items__item:nth-child(4) {
+  -webkit-animation: loading 700ms ease-in-out 100ms backwards;
+          animation: loading 700ms ease-in-out 100ms backwards;
+}
+.menu-list__items:nth-child(1) .menu-list__items__item:nth-child(5) {
+  -webkit-animation: loading 700ms ease-in-out 250ms backwards;
+          animation: loading 700ms ease-in-out 250ms backwards;
+}
+.menu-list__items:nth-child(1) .menu-list__items__item:nth-child(6) {
+  -webkit-animation: loading 700ms ease-in-out 400ms backwards;
+          animation: loading 700ms ease-in-out 400ms backwards;
+}
+.menu-list__items:nth-child(1) .menu-list__items__item:nth-child(7) {
+  -webkit-animation: loading 700ms ease-in-out 550ms backwards;
+          animation: loading 700ms ease-in-out 550ms backwards;
+}
+.menu-list__items:nth-child(1) .menu-list__items__item:nth-child(8) {
+  -webkit-animation: loading 700ms ease-in-out 700ms backwards;
+          animation: loading 700ms ease-in-out 700ms backwards;
+}
+.menu-list__items:nth-child(1) .menu-list__items__item:nth-child(9) {
+  -webkit-animation: loading 700ms ease-in-out 850ms backwards;
+          animation: loading 700ms ease-in-out 850ms backwards;
+}
+.menu-list__items:nth-child(1) .menu-list__items__item:nth-child(10) {
+  -webkit-animation: loading 700ms ease-in-out 1000ms backwards;
+          animation: loading 700ms ease-in-out 1000ms backwards;
+}
+.menu-list__items:nth-child(2) .menu-list__items__item:nth-child(1) {
+  -webkit-animation: loading 700ms ease-in-out 150ms backwards;
+          animation: loading 700ms ease-in-out 150ms backwards;
+}
+.menu-list__items:nth-child(2) .menu-list__items__item:nth-child(2) {
+  -webkit-animation: loading 700ms ease-in-out 300ms backwards;
+          animation: loading 700ms ease-in-out 300ms backwards;
+}
+.menu-list__items:nth-child(2) .menu-list__items__item:nth-child(3) {
+  -webkit-animation: loading 700ms ease-in-out 450ms backwards;
+          animation: loading 700ms ease-in-out 450ms backwards;
+}
+.menu-list__items:nth-child(2) .menu-list__items__item:nth-child(4) {
+  -webkit-animation: loading 700ms ease-in-out 600ms backwards;
+          animation: loading 700ms ease-in-out 600ms backwards;
+}
+.menu-list__items:nth-child(2) .menu-list__items__item:nth-child(5) {
+  -webkit-animation: loading 700ms ease-in-out 750ms backwards;
+          animation: loading 700ms ease-in-out 750ms backwards;
+}
+.menu-list__items:nth-child(2) .menu-list__items__item:nth-child(6) {
+  -webkit-animation: loading 700ms ease-in-out 900ms backwards;
+          animation: loading 700ms ease-in-out 900ms backwards;
+}
+.menu-list__items:nth-child(2) .menu-list__items__item:nth-child(7) {
+  -webkit-animation: loading 700ms ease-in-out 1050ms backwards;
+          animation: loading 700ms ease-in-out 1050ms backwards;
+}
+.menu-list__items:nth-child(2) .menu-list__items__item:nth-child(8) {
+  -webkit-animation: loading 700ms ease-in-out 1200ms backwards;
+          animation: loading 700ms ease-in-out 1200ms backwards;
+}
+.menu-list__items:nth-child(2) .menu-list__items__item:nth-child(9) {
+  -webkit-animation: loading 700ms ease-in-out 1350ms backwards;
+          animation: loading 700ms ease-in-out 1350ms backwards;
+}
+.menu-list__items:nth-child(2) .menu-list__items__item:nth-child(10) {
+  -webkit-animation: loading 700ms ease-in-out 1500ms backwards;
+          animation: loading 700ms ease-in-out 1500ms backwards;
+}
+.menu-list__items:nth-child(3) .menu-list__items__item:nth-child(1) {
+  -webkit-animation: loading 700ms ease-in-out 650ms backwards;
+          animation: loading 700ms ease-in-out 650ms backwards;
+}
+.menu-list__items:nth-child(3) .menu-list__items__item:nth-child(2) {
+  -webkit-animation: loading 700ms ease-in-out 800ms backwards;
+          animation: loading 700ms ease-in-out 800ms backwards;
+}
+.menu-list__items:nth-child(3) .menu-list__items__item:nth-child(3) {
+  -webkit-animation: loading 700ms ease-in-out 950ms backwards;
+          animation: loading 700ms ease-in-out 950ms backwards;
+}
+.menu-list__items:nth-child(3) .menu-list__items__item:nth-child(4) {
+  -webkit-animation: loading 700ms ease-in-out 1100ms backwards;
+          animation: loading 700ms ease-in-out 1100ms backwards;
+}
+.menu-list__items:nth-child(3) .menu-list__items__item:nth-child(5) {
+  -webkit-animation: loading 700ms ease-in-out 1250ms backwards;
+          animation: loading 700ms ease-in-out 1250ms backwards;
+}
+.menu-list__items:nth-child(3) .menu-list__items__item:nth-child(6) {
+  -webkit-animation: loading 700ms ease-in-out 1400ms backwards;
+          animation: loading 700ms ease-in-out 1400ms backwards;
+}
+.menu-list__items:nth-child(3) .menu-list__items__item:nth-child(7) {
+  -webkit-animation: loading 700ms ease-in-out 1550ms backwards;
+          animation: loading 700ms ease-in-out 1550ms backwards;
+}
+.menu-list__items:nth-child(3) .menu-list__items__item:nth-child(8) {
+  -webkit-animation: loading 700ms ease-in-out 1700ms backwards;
+          animation: loading 700ms ease-in-out 1700ms backwards;
+}
+.menu-list__items:nth-child(3) .menu-list__items__item:nth-child(9) {
+  -webkit-animation: loading 700ms ease-in-out 1850ms backwards;
+          animation: loading 700ms ease-in-out 1850ms backwards;
+}
+.menu-list__items:nth-child(3) .menu-list__items__item:nth-child(10) {
+  -webkit-animation: loading 700ms ease-in-out 2000ms backwards;
+          animation: loading 700ms ease-in-out 2000ms backwards;
+}
+.menu-list__items:nth-child(4) .menu-list__items__item:nth-child(1) {
+  -webkit-animation: loading 700ms ease-in-out 1150ms backwards;
+          animation: loading 700ms ease-in-out 1150ms backwards;
+}
+.menu-list__items:nth-child(4) .menu-list__items__item:nth-child(2) {
+  -webkit-animation: loading 700ms ease-in-out 1300ms backwards;
+          animation: loading 700ms ease-in-out 1300ms backwards;
+}
+.menu-list__items:nth-child(4) .menu-list__items__item:nth-child(3) {
+  -webkit-animation: loading 700ms ease-in-out 1450ms backwards;
+          animation: loading 700ms ease-in-out 1450ms backwards;
+}
+.menu-list__items:nth-child(4) .menu-list__items__item:nth-child(4) {
+  -webkit-animation: loading 700ms ease-in-out 1600ms backwards;
+          animation: loading 700ms ease-in-out 1600ms backwards;
+}
+.menu-list__items:nth-child(4) .menu-list__items__item:nth-child(5) {
+  -webkit-animation: loading 700ms ease-in-out 1750ms backwards;
+          animation: loading 700ms ease-in-out 1750ms backwards;
+}
+.menu-list__items:nth-child(4) .menu-list__items__item:nth-child(6) {
+  -webkit-animation: loading 700ms ease-in-out 1900ms backwards;
+          animation: loading 700ms ease-in-out 1900ms backwards;
+}
+.menu-list__items:nth-child(4) .menu-list__items__item:nth-child(7) {
+  -webkit-animation: loading 700ms ease-in-out 2050ms backwards;
+          animation: loading 700ms ease-in-out 2050ms backwards;
+}
+.menu-list__items:nth-child(4) .menu-list__items__item:nth-child(8) {
+  -webkit-animation: loading 700ms ease-in-out 2200ms backwards;
+          animation: loading 700ms ease-in-out 2200ms backwards;
+}
+.menu-list__items:nth-child(4) .menu-list__items__item:nth-child(9) {
+  -webkit-animation: loading 700ms ease-in-out 2350ms backwards;
+          animation: loading 700ms ease-in-out 2350ms backwards;
+}
+.menu-list__items:nth-child(4) .menu-list__items__item:nth-child(10) {
+  -webkit-animation: loading 700ms ease-in-out 2500ms backwards;
+          animation: loading 700ms ease-in-out 2500ms backwards;
+}
+.menu-list__items:nth-child(5) .menu-list__items__item:nth-child(1) {
+  -webkit-animation: loading 700ms ease-in-out 1650ms backwards;
+          animation: loading 700ms ease-in-out 1650ms backwards;
+}
+.menu-list__items:nth-child(5) .menu-list__items__item:nth-child(2) {
+  -webkit-animation: loading 700ms ease-in-out 1800ms backwards;
+          animation: loading 700ms ease-in-out 1800ms backwards;
+}
+.menu-list__items:nth-child(5) .menu-list__items__item:nth-child(3) {
+  -webkit-animation: loading 700ms ease-in-out 1950ms backwards;
+          animation: loading 700ms ease-in-out 1950ms backwards;
+}
+.menu-list__items:nth-child(5) .menu-list__items__item:nth-child(4) {
+  -webkit-animation: loading 700ms ease-in-out 2100ms backwards;
+          animation: loading 700ms ease-in-out 2100ms backwards;
+}
+.menu-list__items:nth-child(5) .menu-list__items__item:nth-child(5) {
+  -webkit-animation: loading 700ms ease-in-out 2250ms backwards;
+          animation: loading 700ms ease-in-out 2250ms backwards;
+}
+.menu-list__items:nth-child(5) .menu-list__items__item:nth-child(6) {
+  -webkit-animation: loading 700ms ease-in-out 2400ms backwards;
+          animation: loading 700ms ease-in-out 2400ms backwards;
+}
+.menu-list__items:nth-child(5) .menu-list__items__item:nth-child(7) {
+  -webkit-animation: loading 700ms ease-in-out 2550ms backwards;
+          animation: loading 700ms ease-in-out 2550ms backwards;
+}
+.menu-list__items:nth-child(5) .menu-list__items__item:nth-child(8) {
+  -webkit-animation: loading 700ms ease-in-out 2700ms backwards;
+          animation: loading 700ms ease-in-out 2700ms backwards;
+}
+.menu-list__items:nth-child(5) .menu-list__items__item:nth-child(9) {
+  -webkit-animation: loading 700ms ease-in-out 2850ms backwards;
+          animation: loading 700ms ease-in-out 2850ms backwards;
+}
+.menu-list__items:nth-child(5) .menu-list__items__item:nth-child(10) {
+  -webkit-animation: loading 700ms ease-in-out 3000ms backwards;
+          animation: loading 700ms ease-in-out 3000ms backwards;
+}
+.menu-list__items:nth-child(6) .menu-list__items__item:nth-child(1) {
+  -webkit-animation: loading 700ms ease-in-out 2150ms backwards;
+          animation: loading 700ms ease-in-out 2150ms backwards;
+}
+.menu-list__items:nth-child(6) .menu-list__items__item:nth-child(2) {
+  -webkit-animation: loading 700ms ease-in-out 2300ms backwards;
+          animation: loading 700ms ease-in-out 2300ms backwards;
+}
+.menu-list__items:nth-child(6) .menu-list__items__item:nth-child(3) {
+  -webkit-animation: loading 700ms ease-in-out 2450ms backwards;
+          animation: loading 700ms ease-in-out 2450ms backwards;
+}
+.menu-list__items:nth-child(6) .menu-list__items__item:nth-child(4) {
+  -webkit-animation: loading 700ms ease-in-out 2600ms backwards;
+          animation: loading 700ms ease-in-out 2600ms backwards;
+}
+.menu-list__items:nth-child(6) .menu-list__items__item:nth-child(5) {
+  -webkit-animation: loading 700ms ease-in-out 2750ms backwards;
+          animation: loading 700ms ease-in-out 2750ms backwards;
+}
+.menu-list__items:nth-child(6) .menu-list__items__item:nth-child(6) {
+  -webkit-animation: loading 700ms ease-in-out 2900ms backwards;
+          animation: loading 700ms ease-in-out 2900ms backwards;
+}
+.menu-list__items:nth-child(6) .menu-list__items__item:nth-child(7) {
+  -webkit-animation: loading 700ms ease-in-out 3050ms backwards;
+          animation: loading 700ms ease-in-out 3050ms backwards;
+}
+.menu-list__items:nth-child(6) .menu-list__items__item:nth-child(8) {
+  -webkit-animation: loading 700ms ease-in-out 3200ms backwards;
+          animation: loading 700ms ease-in-out 3200ms backwards;
+}
+.menu-list__items:nth-child(6) .menu-list__items__item:nth-child(9) {
+  -webkit-animation: loading 700ms ease-in-out 3350ms backwards;
+          animation: loading 700ms ease-in-out 3350ms backwards;
+}
+.menu-list__items:nth-child(6) .menu-list__items__item:nth-child(10) {
+  -webkit-animation: loading 700ms ease-in-out 3500ms backwards;
+          animation: loading 700ms ease-in-out 3500ms backwards;
+}
+.menu-list__items:nth-child(7) .menu-list__items__item:nth-child(1) {
+  -webkit-animation: loading 700ms ease-in-out 2650ms backwards;
+          animation: loading 700ms ease-in-out 2650ms backwards;
+}
+.menu-list__items:nth-child(7) .menu-list__items__item:nth-child(2) {
+  -webkit-animation: loading 700ms ease-in-out 2800ms backwards;
+          animation: loading 700ms ease-in-out 2800ms backwards;
+}
+.menu-list__items:nth-child(7) .menu-list__items__item:nth-child(3) {
+  -webkit-animation: loading 700ms ease-in-out 2950ms backwards;
+          animation: loading 700ms ease-in-out 2950ms backwards;
+}
+.menu-list__items:nth-child(7) .menu-list__items__item:nth-child(4) {
+  -webkit-animation: loading 700ms ease-in-out 3100ms backwards;
+          animation: loading 700ms ease-in-out 3100ms backwards;
+}
+.menu-list__items:nth-child(7) .menu-list__items__item:nth-child(5) {
+  -webkit-animation: loading 700ms ease-in-out 3250ms backwards;
+          animation: loading 700ms ease-in-out 3250ms backwards;
+}
+.menu-list__items:nth-child(7) .menu-list__items__item:nth-child(6) {
+  -webkit-animation: loading 700ms ease-in-out 3400ms backwards;
+          animation: loading 700ms ease-in-out 3400ms backwards;
+}
+.menu-list__items:nth-child(7) .menu-list__items__item:nth-child(7) {
+  -webkit-animation: loading 700ms ease-in-out 3550ms backwards;
+          animation: loading 700ms ease-in-out 3550ms backwards;
+}
+.menu-list__items:nth-child(7) .menu-list__items__item:nth-child(8) {
+  -webkit-animation: loading 700ms ease-in-out 3700ms backwards;
+          animation: loading 700ms ease-in-out 3700ms backwards;
+}
+.menu-list__items:nth-child(7) .menu-list__items__item:nth-child(9) {
+  -webkit-animation: loading 700ms ease-in-out 3850ms backwards;
+          animation: loading 700ms ease-in-out 3850ms backwards;
+}
+.menu-list__items:nth-child(7) .menu-list__items__item:nth-child(10) {
+  -webkit-animation: loading 700ms ease-in-out 4000ms backwards;
+          animation: loading 700ms ease-in-out 4000ms backwards;
+}
+.menu-list__items:nth-child(8) .menu-list__items__item:nth-child(1) {
+  -webkit-animation: loading 700ms ease-in-out 3150ms backwards;
+          animation: loading 700ms ease-in-out 3150ms backwards;
+}
+.menu-list__items:nth-child(8) .menu-list__items__item:nth-child(2) {
+  -webkit-animation: loading 700ms ease-in-out 3300ms backwards;
+          animation: loading 700ms ease-in-out 3300ms backwards;
+}
+.menu-list__items:nth-child(8) .menu-list__items__item:nth-child(3) {
+  -webkit-animation: loading 700ms ease-in-out 3450ms backwards;
+          animation: loading 700ms ease-in-out 3450ms backwards;
+}
+.menu-list__items:nth-child(8) .menu-list__items__item:nth-child(4) {
+  -webkit-animation: loading 700ms ease-in-out 3600ms backwards;
+          animation: loading 700ms ease-in-out 3600ms backwards;
+}
+.menu-list__items:nth-child(8) .menu-list__items__item:nth-child(5) {
+  -webkit-animation: loading 700ms ease-in-out 3750ms backwards;
+          animation: loading 700ms ease-in-out 3750ms backwards;
+}
+.menu-list__items:nth-child(8) .menu-list__items__item:nth-child(6) {
+  -webkit-animation: loading 700ms ease-in-out 3900ms backwards;
+          animation: loading 700ms ease-in-out 3900ms backwards;
+}
+.menu-list__items:nth-child(8) .menu-list__items__item:nth-child(7) {
+  -webkit-animation: loading 700ms ease-in-out 4050ms backwards;
+          animation: loading 700ms ease-in-out 4050ms backwards;
+}
+.menu-list__items:nth-child(8) .menu-list__items__item:nth-child(8) {
+  -webkit-animation: loading 700ms ease-in-out 4200ms backwards;
+          animation: loading 700ms ease-in-out 4200ms backwards;
+}
+.menu-list__items:nth-child(8) .menu-list__items__item:nth-child(9) {
+  -webkit-animation: loading 700ms ease-in-out 4350ms backwards;
+          animation: loading 700ms ease-in-out 4350ms backwards;
+}
+.menu-list__items:nth-child(8) .menu-list__items__item:nth-child(10) {
+  -webkit-animation: loading 700ms ease-in-out 4500ms backwards;
+          animation: loading 700ms ease-in-out 4500ms backwards;
+}
+.menu-list__items:nth-child(9) .menu-list__items__item:nth-child(1) {
+  -webkit-animation: loading 700ms ease-in-out 3650ms backwards;
+          animation: loading 700ms ease-in-out 3650ms backwards;
+}
+.menu-list__items:nth-child(9) .menu-list__items__item:nth-child(2) {
+  -webkit-animation: loading 700ms ease-in-out 3800ms backwards;
+          animation: loading 700ms ease-in-out 3800ms backwards;
+}
+.menu-list__items:nth-child(9) .menu-list__items__item:nth-child(3) {
+  -webkit-animation: loading 700ms ease-in-out 3950ms backwards;
+          animation: loading 700ms ease-in-out 3950ms backwards;
+}
+.menu-list__items:nth-child(9) .menu-list__items__item:nth-child(4) {
+  -webkit-animation: loading 700ms ease-in-out 4100ms backwards;
+          animation: loading 700ms ease-in-out 4100ms backwards;
+}
+.menu-list__items:nth-child(9) .menu-list__items__item:nth-child(5) {
+  -webkit-animation: loading 700ms ease-in-out 4250ms backwards;
+          animation: loading 700ms ease-in-out 4250ms backwards;
+}
+.menu-list__items:nth-child(9) .menu-list__items__item:nth-child(6) {
+  -webkit-animation: loading 700ms ease-in-out 4400ms backwards;
+          animation: loading 700ms ease-in-out 4400ms backwards;
+}
+.menu-list__items:nth-child(9) .menu-list__items__item:nth-child(7) {
+  -webkit-animation: loading 700ms ease-in-out 4550ms backwards;
+          animation: loading 700ms ease-in-out 4550ms backwards;
+}
+.menu-list__items:nth-child(9) .menu-list__items__item:nth-child(8) {
+  -webkit-animation: loading 700ms ease-in-out 4700ms backwards;
+          animation: loading 700ms ease-in-out 4700ms backwards;
+}
+.menu-list__items:nth-child(9) .menu-list__items__item:nth-child(9) {
+  -webkit-animation: loading 700ms ease-in-out 4850ms backwards;
+          animation: loading 700ms ease-in-out 4850ms backwards;
+}
+.menu-list__items:nth-child(9) .menu-list__items__item:nth-child(10) {
+  -webkit-animation: loading 700ms ease-in-out 5000ms backwards;
+          animation: loading 700ms ease-in-out 5000ms backwards;
+}
+.menu-list__items:nth-child(10) .menu-list__items__item:nth-child(1) {
+  -webkit-animation: loading 700ms ease-in-out 4150ms backwards;
+          animation: loading 700ms ease-in-out 4150ms backwards;
+}
+.menu-list__items:nth-child(10) .menu-list__items__item:nth-child(2) {
+  -webkit-animation: loading 700ms ease-in-out 4300ms backwards;
+          animation: loading 700ms ease-in-out 4300ms backwards;
+}
+.menu-list__items:nth-child(10) .menu-list__items__item:nth-child(3) {
+  -webkit-animation: loading 700ms ease-in-out 4450ms backwards;
+          animation: loading 700ms ease-in-out 4450ms backwards;
+}
+.menu-list__items:nth-child(10) .menu-list__items__item:nth-child(4) {
+  -webkit-animation: loading 700ms ease-in-out 4600ms backwards;
+          animation: loading 700ms ease-in-out 4600ms backwards;
+}
+.menu-list__items:nth-child(10) .menu-list__items__item:nth-child(5) {
+  -webkit-animation: loading 700ms ease-in-out 4750ms backwards;
+          animation: loading 700ms ease-in-out 4750ms backwards;
+}
+.menu-list__items:nth-child(10) .menu-list__items__item:nth-child(6) {
+  -webkit-animation: loading 700ms ease-in-out 4900ms backwards;
+          animation: loading 700ms ease-in-out 4900ms backwards;
+}
+.menu-list__items:nth-child(10) .menu-list__items__item:nth-child(7) {
+  -webkit-animation: loading 700ms ease-in-out 5050ms backwards;
+          animation: loading 700ms ease-in-out 5050ms backwards;
+}
+.menu-list__items:nth-child(10) .menu-list__items__item:nth-child(8) {
+  -webkit-animation: loading 700ms ease-in-out 5200ms backwards;
+          animation: loading 700ms ease-in-out 5200ms backwards;
+}
+.menu-list__items:nth-child(10) .menu-list__items__item:nth-child(9) {
+  -webkit-animation: loading 700ms ease-in-out 5350ms backwards;
+          animation: loading 700ms ease-in-out 5350ms backwards;
+}
+.menu-list__items:nth-child(10) .menu-list__items__item:nth-child(10) {
+  -webkit-animation: loading 700ms ease-in-out 5500ms backwards;
+          animation: loading 700ms ease-in-out 5500ms backwards;
 }
 .menu-list__order {
   margin-bottom: 30px;
 }
 .menu-list__order button {
   padding: 0px 40px;
+}
+
+@-webkit-keyframes select {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes select {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loading {
+  0% {
+    opacity: 0%;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 0%;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
 }/*# sourceMappingURL=style.css.map */
