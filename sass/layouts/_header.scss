@@ -13,7 +13,7 @@ $logo-width: calc(100% - ($icon-width * 2));
         @extend %flex-row-start-center;
         width: $icon-width;
         padding-left: $icon-left-padding;
-        color: $grey-1-color;
+        color: $dark-grey-1;
     }
 
     &__logo {

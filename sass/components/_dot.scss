@@ -1,0 +1,11 @@
+$dot-size: 20px;
+
+.dot {
+    @extend %flex-row-center-center;
+    height: $dot-size;
+    width: $dot-size;
+    border-radius: $dot-size;
+
+    background-color: $primary-color;
+    color: $light-grey-4;
+}

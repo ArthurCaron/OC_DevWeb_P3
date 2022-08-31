@@ -13,10 +13,9 @@ $footer-children-height: 25px;
 .footer {
     @extend %flex-column-space-between-stretch;
 
-    background-color: $grey-1-color;
-    color: $grey-5-color;
+    background-color: $dark-grey-1;
+    color: $light-grey-4;
 
-    @include text-font;
     font-size: 14px;
 
     padding: $footer-padding;

@@ -5,12 +5,11 @@ $icon-width: 25px;
     @extend %flex-row-center-center;
     height: $geolocation-height;
 
-    box-shadow: inset 0px 2px 2px $grey-2-color;
+    box-shadow: inset 0px 2px 2px $light-grey-1;
 
-    background-color: $grey-3-color;
-    color: $grey-1-color;
+    background-color: $light-grey-2;
+    color: $dark-grey-1;
     
-    @include text-font;
     font-size: 14px;
     font-weight: 500;
 

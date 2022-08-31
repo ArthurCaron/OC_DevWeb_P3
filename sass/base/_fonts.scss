@@ -21,3 +21,7 @@ $text-font: 'Roboto';
 @mixin text-font {
     font-family: $text-font, 'Courier New', Courier, monospace;
 }
+
+body {
+    @include text-font;
+}
