@@ -1,0 +1,25 @@
+$geolocation-height: 40px;
+$icon-width: 25px;
+
+.geolocation {
+    @extend %flex-row-center-center;
+
+    height: $geolocation-height;
+
+    box-shadow: inset 0px 2px 2px $grey-2-color;
+
+    background-color: $grey-3-color;
+    color: $grey-1-color;
+    
+    @include text-font;
+    font-size: 14px;
+    font-weight: 500;
+
+    i {
+        width: $icon-width;
+    }
+
+    &__filler {
+        width: $icon-width;
+    }
+}
