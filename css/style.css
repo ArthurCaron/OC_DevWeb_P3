@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.explanation ul li, .footer__contact, .footer__legal-notice, .footer__become-partner, .footer__suggest_restaurant, .header__icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.geolocation, .footer__become-partner i, .footer__suggest_restaurant i, .header__logo, .dot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.explanation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", "Courier New", Courier, monospace;
+}
+
+.main-btn {
+  height: 40px;
+  padding: 0px 20px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 5px 3px #cecece;
+  background-image: linear-gradient(170deg, #FF79DA, #9356DC);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background-color: #9356DC;
+  color: #FFFFFF;
+}
+
+.header {
+  height: 60px;
+}
+.header__icon {
+  width: 15%;
+  padding-left: 22px;
+  color: #303030;
+}
+.header__logo {
+  width: 70%;
+}
+.header__logo img {
+  height: 30px;
+}
+.header__filler {
+  width: 15%;
+}
+
+.footer__contact, .footer__legal-notice, .footer__become-partner, .footer__suggest_restaurant {
+  height: 25px;
+}
+
+.footer {
+  background-color: #303030;
+  color: #FFFFFF;
+  font-size: 14px;
+  padding: 20px;
+}
+.footer__logo {
+  margin-bottom: 10px;
+}
+.footer__logo img {
+  height: 15px;
+}
+.footer__suggest_restaurant i {
+  width: 20px;
+  margin-right: 5px;
+}
+.footer__become-partner i {
+  width: 20px;
+  margin-right: 5px;
+}
+.geolocation {
+  height: 40px;
+  box-shadow: inset 0px 2px 2px #cecece;
+  background-color: #e7e7e7;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 500;
+}
+.geolocation i {
+  width: 25px;
+}
+.geolocation__filler {
+  width: 25px;
+}
+
+.explore {
+  padding: 30px;
+  background-color: #f5f5f5;
+}
+.explore h1 {
+  text-align: center;
+  width: 230px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.explore p {
+  text-align: center;
+  width: 300px;
+  margin-bottom: 20px;
+  color: #303030;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.explanation {
+  padding: 30px 15px;
+}
+.explanation h1 {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+}
+.explanation ul {
+  padding: 0px 10px;
+}
+.explanation ul li {
+  height: 60px;
+  margin: 20px 0px;
+  box-shadow: 0px 7px 7px #e7e7e7;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+}
+.explanation ul li .dot {
+  position: relative;
+  left: -10px;
+}
+.explanation ul li i {
+  width: 35px;
+  margin-left: 5px;
+  color: #747574;
+}
+.explanation ul li p {
+  font-size: 14px;
+  font-weight: 500;
+}
+.explanation ul li:hover {
+  background-color: #f3ebfe;
+}
+.explanation ul li:hover i {
+  color: #9356DC;
+}/*# sourceMappingURL=style.css.map */
