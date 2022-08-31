@@ -1,0 +1,31 @@
+$explore-vertical-padding: 30px;
+$explore-horizontal-padding: 0px;
+$title-width: 230px;
+$paragraph-width: 300px;
+
+.explore {
+    @extend %flex-column-start-center;
+    padding: $explore-vertical-padding $explore-horizontal-padding;
+    
+    background-color: $grey-4-color;
+    @include text-font;
+
+    h1 {
+        text-align: center;
+        width: $title-width;
+        margin-bottom: 10px;
+        
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    p {
+        text-align: center;
+        width: $paragraph-width;
+        margin-bottom: 20px;
+
+        color: $grey-1-color;
+        font-size: 16px;
+        font-weight: 300;
+    }
+}

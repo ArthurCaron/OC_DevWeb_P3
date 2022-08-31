@@ -3,7 +3,6 @@ $icon-width: 25px;
 
 .geolocation {
     @extend %flex-row-center-center;
-
     height: $geolocation-height;
 
     box-shadow: inset 0px 2px 2px $grey-2-color;
