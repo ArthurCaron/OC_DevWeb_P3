@@ -1,0 +1,11 @@
+$menu-image-height: 200px;
+
+.menu-image {
+    height: $menu-image-height;
+    
+    img {
+        width: 100%;
+        height: $menu-image-height;
+        object-fit: cover;
+    }
+}
