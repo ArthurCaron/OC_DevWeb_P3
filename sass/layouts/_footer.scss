@@ -14,7 +14,7 @@ $footer-children-height: 25px;
     @extend %flex-column-space-between-stretch;
 
     background-color: $dark-grey-1;
-    color: $light-grey-4;
+    color: white;
 
     font-size: 14px;
 
@@ -54,7 +54,6 @@ $footer-children-height: 25px;
     }
 
     a {
-        color: $light-grey-4;
-        text-decoration: none;
+        color: white;
     }
 }
