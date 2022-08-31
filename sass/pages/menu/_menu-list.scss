@@ -89,4 +89,13 @@ $menu-list-border-radius: 30px;
             }
         }
     }
+
+    &__order {
+        @extend %flex-column-start-center;
+        margin-bottom: 30px;
+
+        button {
+            padding: 0px 40px;
+        }
+    }
 }
