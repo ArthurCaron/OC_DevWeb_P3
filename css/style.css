@@ -190,65 +190,65 @@ body {
 
 @-webkit-keyframes spinner {
   0% {
-    transform: scale(100%, 100%);
+    transform: scale(1, 1);
   }
   70% {
-    transform: scale(120%, 70%);
+    transform: scale(1.2, 0.7);
   }
   80% {
-    transform: scale(80%, 120%);
+    transform: scale(0.8, 1.2);
   }
   85% {
-    transform: scale(115%, 85%);
+    transform: scale(1.15, 0.85);
   }
   90% {
-    transform: scale(90%, 110%);
+    transform: scale(0.9, 1.1);
   }
   95% {
-    transform: scale(105%, 95%);
+    transform: scale(1.05, 0.95);
   }
   100% {
-    transform: scale(100%, 100%);
+    transform: scale(1, 1);
   }
 }
 
 @keyframes spinner {
   0% {
-    transform: scale(100%, 100%);
+    transform: scale(1, 1);
   }
   70% {
-    transform: scale(120%, 70%);
+    transform: scale(1.2, 0.7);
   }
   80% {
-    transform: scale(80%, 120%);
+    transform: scale(0.8, 1.2);
   }
   85% {
-    transform: scale(115%, 85%);
+    transform: scale(1.15, 0.85);
   }
   90% {
-    transform: scale(90%, 110%);
+    transform: scale(0.9, 1.1);
   }
   95% {
-    transform: scale(105%, 95%);
+    transform: scale(1.05, 0.95);
   }
   100% {
-    transform: scale(100%, 100%);
+    transform: scale(1, 1);
   }
 }
 @-webkit-keyframes hide-spinner {
   0% {
-    transform: scale(100%, 100%);
+    transform: scale(1, 1);
   }
   100% {
-    transform: scale(0%, 0%);
+    transform: scale(0, 0);
   }
 }
 @keyframes hide-spinner {
   0% {
-    transform: scale(100%, 100%);
+    transform: scale(1, 1);
   }
   100% {
-    transform: scale(0%, 0%);
+    transform: scale(0, 0);
   }
 }
 .header {

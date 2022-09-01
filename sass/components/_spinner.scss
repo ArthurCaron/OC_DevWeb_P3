@@ -17,33 +17,33 @@
 
 @keyframes spinner {
     0% {
-        transform: scale(100%, 100%);
+        transform: scale(1, 1);
     }
     70% {
-        transform: scale(120%, 70%);
+        transform: scale(1.20, 0.70);
     }
     80% {
-        transform: scale(80%, 120%);
+        transform: scale(0.80, 1.20);
     }
     85% {
-        transform: scale(115%, 85%);
+        transform: scale(1.15, 0.85);
     }
     90% {
-        transform: scale(90%, 110%);
+        transform: scale(0.90, 1.10);
     }
     95% {
-        transform: scale(105%, 95%);
+        transform: scale(1.05, 0.95);
     }
     100% {
-        transform: scale(100%, 100%);
+        transform: scale(1, 1);
     }
 }
 
 @keyframes hide-spinner {
     0% {
-        transform: scale(100%, 100%);
+        transform: scale(1, 1);
     }
     100% {
-        transform: scale(0%, 0%);
+        transform: scale(0, 0);
     }
 }
