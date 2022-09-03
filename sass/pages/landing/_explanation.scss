@@ -10,12 +10,20 @@ $icon-width: 35px;
     @extend %flex-column-start-stretch;
     padding: $explanation-vertical-padding $explanation-horizontal-padding;
 
+    @media screen and (min-width: 1080px) {
+        padding: $explanation-vertical-padding 0px;
+    }
+
     h1 {
         @include big-title;
     }
 
     ul {
         padding: 0px $list-horizontal-padding;
+
+        @media screen and (min-width: 1080px) {
+            padding: 0px 0px 0px $list-horizontal-padding;
+        }
 
         li {
             @extend %flex-row-start-center;
