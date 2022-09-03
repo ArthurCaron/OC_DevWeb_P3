@@ -38,101 +38,112 @@ $menu-list-border-radius: 30px;
         }
     }
 
-    &__items {
-        margin-bottom: 30px;
-        
-        h2 {
-            position: relative;
-            margin-bottom: 20px;
-
-            color: $dark-grey-1;
-            text-transform: uppercase;
-            font-size: 14px;
-
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: -7px;
-                left: 0px;
-                width: 40px;
-                border-bottom: solid 3px $tertiary-color;
-            }
+    &__content {
+        @media screen and (min-width: 700px) {
+            display: flex;
+            justify-content: space-between;
         }
 
-        &__item {
-            @extend %flex-row-start-center;
-            height: 65px;
-            margin: 10px 0px;
-            overflow: hidden;
-            cursor: pointer;
+        &__items {
+            margin-bottom: 30px;
 
-            border-radius: 10px;
-            box-shadow: 0px 7px 7px $light-grey-2;
+            @media screen and (min-width: 700px) {
+                width: 32%;
+            }
+            
+            h2 {
+                position: relative;
+                margin-bottom: 20px;
 
-            background-color: white;
+                color: $dark-grey-1;
+                text-transform: uppercase;
+                font-size: 14px;
 
-            &__content {
-                @extend %flex-column-space-between-stretch;
-                flex-grow: 1;
-                height: 100%;
-                padding: 15px 5px 15px 15px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -7px;
+                    left: 0px;
+                    width: 40px;
+                    border-bottom: solid 3px $tertiary-color;
+                }
+            }
 
+            &__item {
+                @extend %flex-row-start-center;
+                height: 65px;
+                margin: 10px 0px;
                 overflow: hidden;
+                cursor: pointer;
 
-                h3 {
-                    @include hide-text;
+                border-radius: 10px;
+                box-shadow: 0px 7px 7px $light-grey-2;
+
+                background-color: white;
+
+                &__content {
+                    @extend %flex-column-space-between-stretch;
+                    flex-grow: 1;
+                    height: 100%;
+                    padding: 15px 5px 15px 15px;
+
+                    overflow: hidden;
+
+                    h3 {
+                        @include hide-text;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+        
+                    p {
+                        @include hide-text;
+                        font-size: 12px;
+                        font-weight: 300;
+                    }
+                }
+
+                &__amount {
+                    @extend %flex-column-end-center;
+                    height: 100%;
+                    padding: 15px 15px 15px 5px;
+
                     font-size: 14px;
                     font-weight: 500;
                 }
-    
-                p {
-                    @include hide-text;
-                    font-size: 12px;
-                    font-weight: 300;
-                }
-            }
 
-            &__amount {
-                @extend %flex-column-end-center;
-                height: 100%;
-                padding: 15px 15px 15px 5px;
+                &__select {
+                    @extend %flex-row-center-center;
+                    width: 60px;
+                    height: 100%;
+                    margin: 0px -60px 0px 0px;
+                    transition: margin 250ms ease-in-out;
 
-                font-size: 14px;
-                font-weight: 500;
-            }
-
-            &__select {
-                @extend %flex-row-center-center;
-                width: 60px;
-                height: 100%;
-                margin: 0px -60px 0px 0px;
-                transition: margin 250ms ease-in-out;
-
-                background-color: $tertiary-color;
-
-                i {
-                    font-size: 22px;
-                    color: white;
-                }
-            }
-
-            &:hover {
-                .menu-list__items__item__select {
-                    margin: 0px 0px 0px 0px;
+                    background-color: $tertiary-color;
 
                     i {
-                        animation: select 150ms ease-in-out 100ms;
+                        font-size: 22px;
+                        color: white;
+                    }
+                }
+
+                &:hover {
+                    .menu-list__content__items__item__select {
+                        margin: 0px 0px 0px 0px;
+
+                        i {
+                            animation: select 150ms ease-in-out 100ms;
+                        }
                     }
                 }
             }
-        }
-        
-        @for $i from 1 through 10 {
-            &:nth-child(#{$i}) {
-                @for $j from 1 through 10 {
-                    & .menu-list__items__item:nth-child(#{$j}) {
-                        $delay: $i * 500 + $j * 150 - 1000ms;
-                        animation: loading 700ms ease-in-out $delay backwards;
+            
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    @for $j from 1 through 10 {
+                        & .menu-list__content__items__item:nth-child(#{$j}) {
+                            $delay: $i * 500 + $j * 150 - 1000ms;
+                            animation: loading 700ms ease-in-out $delay backwards;
+                        }
                     }
                 }
             }

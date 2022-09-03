@@ -2,10 +2,18 @@ $menu-image-height: 200px;
 
 .menu-image {
     height: $menu-image-height;
+
+    @media screen and (min-width: 700px) {
+        height: $menu-image-height * 2;
+    }
     
     img {
         width: 100%;
         height: $menu-image-height;
         object-fit: cover;
+
+        @media screen and (min-width: 700px) {
+            height: $menu-image-height * 2;
+        }
     }
 }
