@@ -188,6 +188,11 @@ body {
   -webkit-animation: hide-spinner 500ms ease-in-out 2.5s forwards;
           animation: hide-spinner 500ms ease-in-out 2.5s forwards;
 }
+@media screen and (min-width: 1080px) {
+  .spinner {
+    width: 1080px;
+  }
+}
 .spinner i {
   color: #9356DC;
   font-size: 120px;

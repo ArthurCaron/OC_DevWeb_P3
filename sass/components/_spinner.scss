@@ -8,6 +8,10 @@
     background-color: $primary-color-lighter;
     animation: hide-spinner 500ms ease-in-out 2.5s forwards;
 
+    @include desktop-size {
+        width: 1080px;
+    }
+
     i {
         color: $primary-color;
         font-size: 120px;
