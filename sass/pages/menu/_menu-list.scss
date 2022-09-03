@@ -39,7 +39,7 @@ $menu-list-border-radius: 30px;
     }
 
     &__content {
-        @media screen and (min-width: 700px) {
+        @include tablet-size {
             display: flex;
             justify-content: space-between;
         }
@@ -47,7 +47,7 @@ $menu-list-border-radius: 30px;
         &__items {
             margin-bottom: 30px;
 
-            @media screen and (min-width: 700px) {
+            @include tablet-size {
                 width: 32%;
             }
             

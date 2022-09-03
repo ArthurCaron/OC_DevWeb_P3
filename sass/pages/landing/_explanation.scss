@@ -10,7 +10,7 @@ $icon-width: 35px;
     @extend %flex-column-start-stretch;
     padding: $explanation-vertical-padding $explanation-horizontal-padding;
 
-    @media screen and (min-width: 1080px) {
+    @include desktop-size {
         padding: $explanation-vertical-padding 0px;
     }
 
@@ -21,7 +21,7 @@ $icon-width: 35px;
     ul {
         padding: 0px $list-horizontal-padding;
 
-        @media screen and (min-width: 1080px) {
+        @include desktop-size {
             padding: 0px 0px 0px $list-horizontal-padding;
         }
 

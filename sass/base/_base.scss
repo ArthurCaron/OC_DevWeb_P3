@@ -3,7 +3,7 @@ a {
     text-decoration: none;
 }
 
-@media screen and (min-width: 1080px) {
+@include desktop-size {
     body {
         width: 1080px;
         margin: auto;

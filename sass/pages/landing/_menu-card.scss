@@ -10,7 +10,7 @@ $list-element-vertical-margin: 20px;
     
     background-color: $light-grey-3;
 
-    @media screen and (min-width: 1080px) {
+    @include desktop-size {
         border-radius: 30px 30px 0px 0px;
     }
 
@@ -19,7 +19,7 @@ $list-element-vertical-margin: 20px;
     }
 
     ul {
-        @media screen and (min-width: 700px) {
+        @include tablet-size {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -29,8 +29,8 @@ $list-element-vertical-margin: 20px;
         li {
             position: relative;
             margin: $list-element-vertical-margin 0px;
-                        
-            @media screen and (min-width: 700px) {
+
+            @include tablet-size {
                 width: 49%;
             }
 
@@ -66,7 +66,7 @@ $list-element-vertical-margin: 20px;
                         object-fit: cover;
                         border-radius: $figure-radius $figure-radius 0px 0px;
                         
-                        @media screen and (min-width: 700px) {
+                        @include tablet-size {
                             height: 250px;
                         }
                     }
