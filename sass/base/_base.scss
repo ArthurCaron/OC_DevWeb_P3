@@ -4,7 +4,7 @@ a {
 }
 
 @include desktop-size {
-    body {
+    .main {
         width: 1080px;
         margin: auto;
     }
